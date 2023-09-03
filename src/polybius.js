@@ -1,26 +1,3 @@
-/* 
-
-
-
-5. The `encodeFunc` function is defined to encode letters into numbers. 
-It iterates through the input string and checks if each character is a 
-letter or not. If it's not a letter, it directly adds it to the `result`.
-If it's a letter, it matches the letter with the values in the `grid` 
-and adds the corresponding key to the `result`.
-
-6. The `decodeFunc` function is defined to decode numbers into letters. 
-It iterates through the input string and checks if each character is a 
-space or not. If it's a space, it adds it to the `result`. If not, it 
-combines two characters to form a number (except for 'i/j', which is 
-handled separately) and then matches the number with the keys in the 
-`grid` to get the corresponding value and adds it to the `result`.
-
-7. The `isEven` function is defined to check if the input length is 
-even (used for decoding). It counts the number of non-space characters 
-and checks if the count is even or not.
-
-*/
-
 const polybiusModule = (function () {
   const encodeValues = {
     a: "11",
@@ -80,7 +57,6 @@ const polybiusModule = (function () {
 
   function polybius(input, encode = true) {
     let encodedArr = [];
-    // modulus / remainder ;; 1112131 = return false on decode
     if (encode) {
       const lowercaseStr = input.toLowerCase().split("");
 
